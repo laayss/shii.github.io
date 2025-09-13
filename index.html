@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Gloria Hallelujah', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .journal-container {
+    width: 80%;
+    max-width: 700px;
+    height: 80vh;
+    background: #fdfdfd;
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+    position: relative;
+    line-height: 1.8;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #fdfdfd 0px,
+      #fdfdfd 24px,
+      #dcdcdc 25px
+    );
+    overflow: hidden; /* keep hidden for outer container */
+  }
+
+    /* notebook holes (left side) */
+    .holes {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .hole {
+      width: 14px;
+      height: 14px;
+      background: #000;
+      border-radius: 50%;
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    .entry {
+    width: 100%;
+    height: calc(100% - 70px); /* leave space for buttons */
+    display: none;
+    animation: fadeIn 0.6s ease-in-out;
+    overflow-y: auto; /* make content scrollable */
+    padding-right: 10px; /* space for scrollbar */
+  }
+
+  .entry.active {
+    display: block;
+    animation: pageFlip 0.6s ease-in-out;
+  }
+
+    .date {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes pageFlip {
+      0% {transform: rotateY(90deg); opacity: 0;}
+      100% {transform: rotateY(0deg); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="journal-container">
+    <div class="holes">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+
+    <div class="entry active">
+      <div class="date">June 6, 2025</div>
+      <p>
+        Parang dito ko talaga naramdaman na nagssink in na — hindi na kami nag-uusap ng gf ko. Alam ko busy siya sa practice for theater, kaya ayokong kulitin. Nag-usap naman kami noong May, last week pa nga. Pero kahit ganoon, hindi ko mapigilan ang mag-overthink. Hindi ko talaga kayang kalabanin ang utak ko minsan.
+        She kept her promise — yung simpleng “hi.” At least doon, alam kong andiyan pa rin ako sa isip niya, at alam kong andito pa rin ako para sa kanya. Every day, every night, naghihintay lang ako, if ever she wants to talk or ikuwento kung anong nangyari. Ayokong pilitin siya, pero siyempre, hindi mag-message ng ilang araw… sino ba namang hindi masasaktan?
+        Naalala ko pa nung nag-good morning siya. Sobrang saya ko nun, kasi kahit papaano, naisip niya ako. Pero hindi na ako nag-initiate ng conversation, kasi alam kong pagod din siya. Yun nga lang, isang araw lang niya nagawa yung simpleng kumustahin ako. Kinabukasan, at sa mga sumunod pang araw… nothing. Ang sakit, pero sinet aside ko na lang. Iniisip ko baka OA lang ako. Hindi naman sakin umiikot ang mundo ng gf ko, diba?</p>
+    </div>
+    <div class="entry">
+      <div class="date">June 11, 2025</div>
+      <p>I was starting to get used to the silence between us. I don’t know what’s happening in her life anymore — kung okay ba siya, o kung may pinagdadaanan. She doesn’t talk to me, and honestly, it feels like she doesn’t even want to. So me, being me… I stopped trying, too. Why would I?
+
+        Then, out of nowhere, Czara chatted me. She asked if Shiian already went home. I said I didn’t know. When she asked why, I told her the truth — we don’t talk anymore. She was shocked, probably even thought we’d broken up. Heck, that’s the last thing I’d ever want. In fact, I wanted to tell Shiian, “Wag tayong matulad kila czr ah, wag tayong sumabay sa mga nagbbreak ngayon.” But I didn’t. I held it in, because I knew na nagtatampo sya kay Czara that time, and I didn’t want to bring up that topic.
+        
+        But since Czara kept asking, I ended up opening up. That’s when it hit me how heavy everything felt. I was carrying all this pain alone, pretending it wasn’t there. And I never imagined I’d talk about my relationship with someone else. I never do. My relationship is between me and her — my friends don’t have to know. But that day, I couldn’t hold it anymore.
+        
+        Czara told me Shiian didn’t go with them. Apparently, she went with SHS students instead, while the others stayed behind for different reasons. And you know what? I trusted her. I didn’t think much of it. I know my girlfriend is extroverted, friendly — walang malisya. I let her be.
+        
+        But then Czara said something that struck me. “Bakit yung SHS nacchat niya, ikaw hindi?” That one hit like a brick. She could reply to Czara about going home, she could message others about her day… but me, her jowa, she couldn’t even send a word. The whole day, nothing.
+        
+        And that’s when I realized — it hurts. It hurts to know she has the time and effort to connect with others, yet with me, it’s silence. It hurts to realize I don’t know anything about her right now, while other people do. It hurts to wonder… are we still even in a relationship? Do I still cross her mind? Because right now, it doesn’t feel like it.</p>
+    </div>
+    <div class="entry">
+      <div class="date">June 12, 2025</div>
+      <p>FYP ko sa TikTok puro brokenhearted bigla… is this a sign ba? Lord, wag naman pls. I trust her naman, sobra. I trust my gf, I love her so much. Pero kahit gano’n, di ko mapigilan yung utak ko. Overthinking nanaman. Kahit pilitin kong i-shrug off, kahit pilitin kong sabihing wala lang, babalik at babalik siya.
+       
+<br>
+      </br>
+          Ung sinabi ni Czara paulit-ulit nasa isip ko — na she spends time with SHS pips. Alam ko namang wala namang malisya dun, and I don’t wanna be that person na parang seloso sa lahat. I keep reminding myself: she’s friendly, she’s extroverted, that’s just how she is. Mali na nga to think this way eh. Wrong to doubt her. Pero bakit ganito pa rin? Bakit parang hindi ko mapigilan sarili kong magduda kahit ayokong magduda?  </br>
+<br>
+        Then the what-ifs start piling up. What if may iba syang kausap dun? What if she found someone na mas comfortable kausap kesa sakin? What if may nakilala syang iba na mas napapansin sya, mas lagi syang kinakausap? And the worst part is — I wouldn’t even know, kasi di naman nya shinashare sakin. Last thing I remember, nagkwento lang siya na magagaling daw yung mga SHS sa acting, fast learners sila. Yun lang. Beyond that, wala na.
+      </br>
+      <br></br>
+        Ang bigat isipin. Hindi lang yung possibility na may bago syang nakilala, kundi yung fact na… I don’t know anything anymore. Parang dati, updated ako sa mundo nya, sa araw nya, kahit simpleng kwento lang. Ngayon? I feel so far away. I feel like I don’t belong sa mundo nya lately. And kahit gaano ko pa gustong kumapit sa tiwala ko, ang hirap pigilan yung lungkot.
+<br></br>
+      Even yung mga TikTok vids she sends me — minsan naiisip ko if it’s really her wanting to send them, or baka parang responsibility na lang. Like “oh, may streak pala kami, I should at least send something.” Not cuz she really wants to share with me. Ang sakit isipin kasi I want to believe na it’s genuine, pero the way things are right now, it doesn’t feel like it.
+    <br></br>
+        I know I’m bad for thinking like this. Alam kong mali. Pero can u really blame me? Ilang araw na rin akong nag-aask kay Lord ng sign. “Lord, give me a reason to talk to her, para ma-open up ko na tong nararamdaman ko.” Ewan ko na nga kung ano exactly yung sign na hiningi ko — nakalimutan ko na rin. Pero deep inside, I’ve been waiting for something, for anything, to tell me na it’s time to confront her, to be honest about my pain.
+
+  <br></br>  And maybe… maybe that’s the sign itself? The fact na I’m even here, overthinking, wishing, begging for a reason — maybe yun na yung sagot. Maybe the sign isn’t something external. Maybe it’s me, realizing na hindi ko na kaya itago lahat ng totoo kong nararamdaman.</p>
+    </div>
+
+
+        <div class="entry">
+      <div class="date">June 13, 2025</div>
+      <p> Sobrang lala na ng pagka-overthink ko, lalo na’t puro “broken” content yung napapakita sakin sa TikTok. Kaya naparanta ako bigla kay Leo,, anong oras na ng gabi non. I needed an opinion. Nag-contemplate pa ako bago ko siya i-message — should I even ask? baka overthink lang talaga ako. baka OA lang ako. Pero in the end, tinanong ko rin siya.
+<br></br>
+            I asked Leo, “Ano mas okay, mag-cool off na lang ba kami or break up agad?” Syempre nagulat siya. Bigat nun diba? Tapos nagrant ako, sinabog ko na lahat ng bigat na nararamdaman ko. Sabi ni Leo, we should talk about it daw ni Shiian. I agreed, sinabi ko naman na mag-meet kami sa birthday ko.
+<br></br>
+          Pero ang sagot ko sa kanya: “Ayoko na ulit i-bring up, kasi napagusapan na namin ‘to last month. Baka isang weeek lang ang pagitan, nagrereklamo na naman ako. Baka I’d be too much na if ganon.” Kasi totoo, yun yung takot ko — na maging “too much,” na maging mabigat.
+<br></br>
+          Pero Leo kept telling me, “Dapat niyo talagang pag-usapan, communication is the key.” And that’s where my mind got stuck. Kasi what if nag-communicate na kami… tapos wala ring nagbago? Anong sasabihin mo dun? Kapag tapos na yung communication, tapos same pa rin lahat… what’s next?
+<br></br>
+          Nag-quote pa si Leo ng Taylor Swift: “love’s never lost when perspective is earned.” At ayun, napaisip ako ulit. Maybe OA lang talaga ako. Maybe jowa ko’s just busy. Maybe kaya hindi niya ako chinachat, hindi dahil ayaw niya — kundi dahil madami lang siyang ginagawa. Maybe ako lang yung masyadong demanding. So I shrugged it off. Pinilit kong maniwala na OA lang ako.
+<br></br>
+Sinabi ko sa sarili ko: “Hintayin ko na lang after performance niya. Baka sakaling dun siya makipag-usap sakin, baka babawi siya sa times na wala siyang paramdam.” Pero deep inside, andun pa rin yung tanong na kumakagat sa akin: does she miss me ba? Cuz me… I miss her very, very much.</p>
+    </div>
+
+
+      <div class="entry">
+    <div class="date">June 14, 2025</div>
+    <p> D-day ng performance nila. Excited pa rin ako for her, baby ko parin naman siya kahit tampo ako sakanya. Si Leo nga, ini-invite pa kami nila Kesi. Pero kahit ganon… she still doesn’t talk to me. Should I tell her “good luck”? Eh what if ayaw niya talaga akong kausap? What if makaapekto pa yun sa performance niya?
+<br></br>
+            Sabi nila sabihan ko raw. So I did. Pero hindi ko sinabing “I love you.” Hoping she’d get the hint na may tampo ako. Alam kong these past few days, hindi ko rin nasasabi yun sakanya—so not me. After that, I tried to sleep na lang.
+<br></br>
+            Oh btw, I’ve been having insomnia since Monday. I can’t sleep to the point na nakikitulog na ako sa kwarto ni Mama kasi hindi ko kaya mag-isa sa kwarto ko. Ang gulo ng utak ko, ang bigat ng dibdib ko.
+<br></br>
+            Pag gising ko sa umaga, nagreply siya. Sabi niya: “Thank you, I love u.” Hindi ko nireplyan. Gusto ko pa rin sana ipakita yung tampo ko through silence. Pero wala, parang wala lang din sa kanya. Do I look okay to her? Do we look okay? Is this normal for us? Siguro hindi niya na iniisip yun kasi naka-focus siya sa performance. Kaya ayun, pinagalitan ko sarili ko—“Anoba, wag masyadong OA, self.”
+<br></br>
+            Fast forward sa gabi, naglalaba ako. Syempre Sabado ngayon eh. Nagpapamusic ako habang naghuhugas ng damit tapos nagchat si Leo. Sabi niya: “Usap tayo mamaya.” Nagulat ako—serious yung tone niya. Kinabahan ako bigla. Is this about Shiian? What’s going on? Tinanong ko kung bakit, pero di na siya nagreply agad.
+<br></br>
+            Mga 10 or 11 na ata nun nang kinausap niya ako ulit. Sabi niya, hindi rin niya sure. Baka siya lang din nag-ooverthink. Pero he suggested na mag-usap na daw talaga kami ni Shiian. Nagbigay pa siya ng hint: “Check mo story niya.” So I checked, pero wala naman akong nakitang kakaiba.
+<br></br>
+            Tapos biglang nagchat sakin si Czara. Sabi niya, mag-uusap daw sila ni Shiian pag-uwi since dun matutulog si Shiian sa kanila. Galit yung tono niya. Kaya sabi ko, “Wag mong pagalitan, please. Kung anuman yan, dahan-dahan lang.” Pero sabi niya, mali raw talaga.
+<br></br>
+            Ayun na. Overthinker me again. Ang dami kong iniisip. Ano bang nangyayari? What could’ve happened sa performance? Leo naman, kinukwento na nawalan siya ng gana kumain dahil dito. Eh ako? I keep circling back to the same fear—baka she met someone sa theater. Pero deep inside, mas malakas pa rin yung tiwala ko kay Shiian. Kaya I decided: maghihintay na lang ako
+<br></br>
+            Nung nakauwi na si Czara, galit talaga siya. Sabi ko ulit, “Please, kung magagalit ka kay Shiian, dahan-dahan lang. Ayoko kayong mag-away because of us.” Sagot niya, “Wait ka lang, kakausapin ka ni Shiian in a while. Ako muna mag-uusap sa kanya.”
+<br></br>
+            Habang naghihintay ako, si Leo kept me company. Hindi pa nga daw siya naliligo, haha, kaya narealize ko na—medyo serious nga to. </p>
+<br></br>
+        
+    </div>
+
+    <div class="entry">
+          <div class="date">June 15, 2025</div>
+          <p> 12+ AM na, ready na sana akong matulog since parang wala namang plano si Shiian na kausapin ako. Kaya ayun, lumipat na ako sa kwarto ni Mama para makatulog na lang. Tapos biglang nagchat si Czara. Sabi niya, kakausapin daw ako ni Shiian. Alam na raw niya yung buong story, at kung gusto ko raw malaman, sabihin ko lang. Pero dinagdagan pa niya ng linya: “Masasaktan ka talaga, promise iiyak ka.”
+<br></br>
+        Napangiti na lang ako—like, wow. I think I already know where this is going. Baka tama na naman ang instincts ko.
+<br></br>
+            Nagsisimula na akong i-prepare yung sarili ko. Kasi earlier, kinwento na rin ni Leo yung mga observations niya. Hindi full story, pero enough to give me an idea. Kaya feeling ko ready na ako. Pero deep inside? Tangina, am I really ready? Ready ba akong marinig yun—directly from her? Kinakabahan talaga ako.
+<br></br>
+            Then, ayun na nga. She chatted me. For the first time, sumulpot ulit name niya sa notifs ko. Sabi ko pa nga, “Kung di ka pa ready, bukas na lang.” Pero sabi niya, ngayon na raw niya sasabihin. And then—boogsh. Nag-drop siya ng isang mahaba-habang message.
+<br></br>
+            Binasa ko. Of course, binasa ko. Tangina, halos maluha na ako nung nabasa ko yung part about her “future” reason. Pero umudlot lahat ng luha ko nung sinabi niyang… she met someone.
+<br></br>
+            …
+<br></br>
+           I WAS RIGHT.
+<br></br>
+          Tama nga ang instincts ko.
+<br></br>
+          HAHAHA. Pota. Pota. Pota.
+<br></br>
+          Speechless ako. Hindi ko alam anong isasagot. Pero in the end, nilabas ko lahat ng raw emotions ko. Lahat ng sakit, lahat ng galit. I felt hurt, I felt betrayed. Naiinis ako. How could she do that to me? Out of all people… why her?
+<br></br>
+           Pano niya nagawa yun?
+<br></br>
+          Sinabi ko lahat ng gusto kong sabihin. Words na kahit ako, di ko ine-expect na lalabas sakin. At habang nagsasabi ako nun—hindi pa siya nagrereply agad. Mas lalo akong nainis. Like, wow. Sasabihin mo sakin yung ganon kalaking bagay tapos iiwan mo akong naglalaway sa reply mo? Nice talking, ha.
+<br></br>
+            “Thank you sa pa-birthday gift, Shiian.” Yun na lang nasabi ko. Kasi tangina, just last month nagpa-plano pa tayo kung anong gagawin sa birthday ko. Pero iba pala plano mo. Ang daya mo.
+<br></br>
+            Pano mo nasabi yun, pano mo nagawa? Wala ba talaga akong lugar sa isip mo? Sure. Pero yung hindi mo man lang marealize na mali yung actions mo? Tangina naman. Manhid ka pa rin pala. Akala ko naging cautious na tayo, lalo na after nung mga selosan talks natin. Pero hindi. Hindi mo pala talaga tinake yun to heart.
+<br></br>
+            Just two weeks ago, hawak mo kamay ko. Tas ngayon… you’re holding someone else’s hand. Fuck. Ang sakit. Pano mo nagawa yun? Pano nakakayanan ng sikmura mo?
+<br></br>
+            And then you have the nerve to tell me you love me? Do you really think that’s love? Ha? Pano mo nagawa magtype ng “I love you” tapos right after, nakikipag-akbayan at hawakan ng kamay sa iba? Wala ka bang hiya?
+<br></br>
+            Kapal naman ng mukha mo to still say that. No, you don’t love me. Hindi mo ako iniisip nung ginawa mo yun. So saan dun yung proof na mahal mo ko? After all that, dare you still call it love?
+<br></br>
+            Nakakatawa lang. Ako tong ilang linggo nang hinihintay ka, nag-aabang ng kahit anong paramdam. Ako tong nagpapagod magtiis, nagtatanggol sayo sa isip ko every time na may pumapasok na duda. Ako tong nagseset aside ng sakit kasi sabi ko sa sarili ko: “Hindi, mahal niya ako, busy lang siya.” Ako yun. Ako lahat yun.
+<br></br>
+            Tapos ikaw? While I was waiting, ikaw pala… you were already giving pieces of yourself to someone else. You were already building moments with another person habang ako, naghohold on sa mga “I love you” mo na, in the end, empty words lang pala.
+<br></br>
+            Tangina, ang unfair. Ang daya. Ang sakit.
+<br></br>
+            Kaya ba lately parang wala na akong halaga? Kaya ba parang wala akong alam sa buhay mo? Kaya ba kahit simpleng “good morning” hirap na hirap ka nang ibigay sakin? Cuz all this time… someone else was getting it.
+<br></br>
+            Pakiramdam ko ginago mo ko. Binalewala mo yung lahat ng effort, lahat ng tiwala, lahat ng pagmamahal na binuhos ko sayo. I thought I was enough. I thought lalaban tau kahit mahirap, kahit busy, kahit tambak problema. Pero hindi pala. Hindi pala ako sapat para piliin mo everyday.
+<br></br>
+            And what’s worse? Hindi ka man lang nag-isip kung pano ako masasaktan. Hindi mo man lang cinonsider na may taong mahuhulog sa mga actions mo—ako yun, Shiian. Ako yung masasaktan.
+<br></br>
+            Happy birthday to me, diba? This is my gift.
+<br></br>
+            The truth I never wanted to hear, pero I had to.
+<br></br>
+          </p>
+    </div>
+
+     
+
+
+
+
+    <div class="buttons">
+      <button id="prevBtn">⬅ Prev</button>
+      <button id="nextBtn">Next ➡</button>
+    </div>
+  </div>
+
+  <script>
+    const entries = document.querySelectorAll(".entry");
+    let current = 0;
+
+    function showEntry(index) {
+      entries.forEach((entry, i) => {
+        entry.classList.toggle("active", i === index);
+      });
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      current = (current + 1) % entries.length;
+      showEntry(current);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      current = (current - 1 + entries.length) % entries.length;
+      showEntry(current);
+    });
+  </script>
+</body>
+</html>
